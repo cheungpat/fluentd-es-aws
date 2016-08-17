@@ -15,7 +15,7 @@
 .PHONY:	build push
 
 IMAGE = fluentd-elasticsearch-aws
-TAG = 1.17-3
+TAG = 1.17-4
 
 build:	
 	docker build -t quay.io/cheungpat/$(IMAGE):$(TAG) .
