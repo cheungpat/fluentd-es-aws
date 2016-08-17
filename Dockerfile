@@ -48,9 +48,8 @@ RUN sed -i -e "s/USER=td-agent/USER=root/" -e "s/GROUP=td-agent/GROUP=root/" /et
 # Install the Kubernetes metadata filter.
 RUN td-agent-gem install fluent-plugin-kubernetes_metadata_filter
 
-# Install the Elasticsearch Fluentd plug-in. 0.1.5 does not work because
-# of https://github.com/atomita/fluent-plugin-aws-elasticsearch-service/pull/14
-RUN td-agent-gem install fluent-plugin-aws-elasticsearch-service -v 0.1.4
+# Install the Elasticsearch Fluentd plug-in.
+RUN td-agent-gem install fluent-plugin-aws-elasticsearch-service -v 0.1.6
 
 # Copy the Fluentd configuration file.
 COPY td-agent.conf /etc/td-agent/td-agent.conf
