@@ -1,4 +1,4 @@
-# Copyright 2016 The Kubernetes Authors All rights reserved.
+# Copyright 2016 The Kubernetes Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,11 +14,12 @@
 
 .PHONY:	build push
 
+PREFIX = cheungpat
 IMAGE = fluentd-elasticsearch-aws
-TAG = 1.17-4
+TAG = 1.22
 
-build:	
-	docker build -t quay.io/cheungpat/$(IMAGE):$(TAG) .
+build:
+	docker build --pull -t $(PREFIX)/$(IMAGE):$(TAG) .
 
-push:	
-	docker push quay.io/cheungpat/$(IMAGE):$(TAG)
+push:
+	docker push $(PREFIX)/$(IMAGE):$(TAG)
