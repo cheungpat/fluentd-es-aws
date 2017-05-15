@@ -10,3 +10,6 @@ You must configure the following environment variables:
 * `AWS_REGION`
 * `AWS_ACCESS_KEY_ID`
 * `AWS_SECRET_ACCESS_KEY`
+# Elasticsearch indicie name = ${LOGSTASH_PREFIX}-${LOGSTASH_DATEFORMAT}
+* `LOGSTASH_PREFIX`
+* `LOGSTASH_DATEFORMAT`
