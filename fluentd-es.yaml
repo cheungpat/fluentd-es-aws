@@ -21,7 +21,7 @@ spec:
       namespace: kube-system
     spec:
       containers:
-      - image: quay.io/cheungpat/fluentd-elasticsearch-aws:1.17-3
+      - image: quay.io/cheungpat/fluentd-elasticsearch-aws:1.22
         imagePullPolicy: IfNotPresent
         name: fluentd-elasticsearch
         resources:
